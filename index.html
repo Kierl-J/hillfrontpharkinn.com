@@ -3,32 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hillfront Phark Inn | Hotel & Resort in Dumanjug, Cebu</title>
-    <meta name="description" content="Experience comfort and warm Filipino hospitality at Hillfront Phark Inn in Dumanjug, Cebu. Beautiful rooms, stunning views, and exceptional service await you.">
+    <title>Hillfront Phark Inn | Luxury Resort in Dumanjug, Cebu</title>
+    <meta name="description" content="Discover unparalleled luxury at Hillfront Phark Inn. Premium accommodations, world-class amenities, and breathtaking views in the heart of Dumanjug, Cebu.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">HILLFRONT</div>
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
     <!-- Header -->
     <header class="header" id="header">
-        <div class="container">
+        <div class="header-inner">
             <a href="#" class="logo">
-                <span class="logo-text">Hillfront Phark Inn</span>
+                <span class="logo-icon">
+                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 5L45 20V45H5V20L25 5Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M15 45V28H35V45" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M25 5V15" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </span>
+                <div class="logo-text">
+                    <span class="logo-main">Hillfront</span>
+                    <span class="logo-sub">Phark Inn</span>
+                </div>
             </a>
+
             <nav class="nav" id="nav">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#rooms" class="nav-link">Rooms</a></li>
-                    <li><a href="#amenities" class="nav-link">Amenities</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#home" class="nav-link active" data-text="Home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                    <li><a href="#suites" class="nav-link" data-text="Suites">Suites</a></li>
+                    <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+                    <li><a href="#gallery" class="nav-link" data-text="Gallery">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#booking" class="btn btn-primary header-btn">Book Now</a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+
+            <div class="header-actions">
+                <a href="tel:+639XXXXXXXXX" class="header-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+63 9XX XXX XXXX</span>
+                </a>
+                <a href="#reservations" class="btn btn-gold">Reserve Now</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,260 +70,394 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-slide-bg"></div>
+            </div>
+        </div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">Welcome to Hillfront Phark Inn</h1>
-            <p class="hero-subtitle">Experience comfort, warm Filipino hospitality, and breathtaking views in Dumanjug, Cebu</p>
-            <div class="hero-btns">
-                <a href="#rooms" class="btn btn-primary btn-lg">Explore Rooms</a>
-                <a href="#booking" class="btn btn-outline btn-lg">Book Your Stay</a>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="line"></span>
+                <span class="text">Luxury Resort & Hotel</span>
+                <span class="line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Experience</span>
+                <span class="title-line title-accent">Extraordinary</span>
+                <span class="title-line">Luxury</span>
+            </h1>
+            <p class="hero-subtitle">Where timeless elegance meets modern sophistication in the serene hills of Dumanjug, Cebu</p>
+            <div class="hero-actions">
+                <a href="#suites" class="btn btn-white btn-lg">
+                    <span>Discover Suites</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="btn btn-outline-white btn-lg">
+                    <span>Our Story</span>
+                </a>
             </div>
         </div>
         <div class="hero-scroll">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            <span class="scroll-text">Scroll to Explore</span>
+            <div class="scroll-line">
+                <span></span>
+            </div>
+        </div>
+        <div class="hero-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
         </div>
     </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>Luxury Redefined</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Exclusive Getaway</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Premium Service</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Unforgettable Experience</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Luxury Redefined</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Exclusive Getaway</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Premium Service</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+            <span>Unforgettable Experience</span>
+            <span class="diamond"><i class="fas fa-diamond"></i></span>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <span class="section-tag">About Us</span>
-                    <h2 class="section-title">A Retreat Like No Other</h2>
-                    <p>Nestled in the scenic hills of Dumanjug, Cebu, Hillfront Phark Inn offers an unparalleled escape from the everyday. Our hotel combines comfortable accommodations with warm Filipino hospitality to create memories that last a lifetime.</p>
-                    <p>Whether you're seeking a romantic getaway, a family adventure, or a peaceful retreat, our dedicated staff ensures every moment of your stay exceeds expectations. Discover the beauty of Central Visayas from our doorstep.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <h4>Award Winning</h4>
-                                <p>Recognized for excellence</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-concierge-bell"></i>
-                            <div>
-                                <h4>24/7 Service</h4>
-                                <p>Always at your service</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-img-wrapper">
-                        <div class="about-img-placeholder">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img about-img-1">
+                        <div class="img-placeholder">
                             <i class="fas fa-hotel"></i>
                             <span>Hotel Exterior</span>
                         </div>
+                        <div class="img-frame"></div>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Years of Excellence</span>
+                    <div class="about-img about-img-2">
+                        <div class="img-placeholder">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Lobby</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Luxury Rooms</span>
+                        <div class="img-frame"></div>
+                    </div>
+                    <div class="about-experience">
+                        <span class="exp-number">Est.</span>
+                        <span class="exp-year">2025</span>
+                        <span class="exp-text">Opening Year</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span class="label-text">Our Story</span>
+                    </div>
+                    <h2 class="section-title">
+                        A Sanctuary of <br><em>Refined Elegance</em>
+                    </h2>
+                    <div class="about-text">
+                        <p class="lead">Perched majestically among the lush hills of Dumanjug, Cebu, Hillfront Phark Inn represents the pinnacle of Filipino hospitality merged with world-class luxury.</p>
+                        <p>Every detail has been meticulously crafted to create an atmosphere of unparalleled sophistication. From our thoughtfully designed suites to our exceptional service, we invite you to experience a retreat where every moment becomes a cherished memory.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Premium Suites</h4>
+                                <p>Luxuriously appointed accommodations</p>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">10K+</span>
-                            <span class="stat-label">Happy Guests</span>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Exclusive Service</h4>
+                                <p>Personalized attention to every detail</p>
+                            </div>
                         </div>
                     </div>
+                    <a href="#experience" class="btn btn-dark">
+                        <span>Explore More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rooms Section -->
-    <section class="rooms" id="rooms">
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Luxury Suites</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="24">0</span>
+                    <span class="stat-suffix">/7</span>
+                    <span class="stat-label">Concierge Service</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Guest Satisfaction</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-suffix">-Star</span>
+                    <span class="stat-label">Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suites Section -->
+    <section class="suites" id="suites">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Accommodations</span>
-                <h2 class="section-title">Our Rooms & Suites</h2>
-                <p class="section-desc">Choose from our selection of elegantly appointed rooms and suites, each designed for your ultimate comfort</p>
-            </div>
-            <div class="rooms-grid">
-                <!-- Room 1 -->
-                <div class="room-card">
-                    <div class="room-image">
-                        <div class="room-img-placeholder">
-                            <i class="fas fa-bed"></i>
-                            <span>Standard Room</span>
-                        </div>
-                        <span class="room-badge">Popular</span>
-                    </div>
-                    <div class="room-content">
-                        <h3 class="room-title">Standard Room</h3>
-                        <p class="room-desc">Comfortable and cozy room perfect for solo travelers or couples seeking a peaceful stay.</p>
-                        <ul class="room-features">
-                            <li><i class="fas fa-bed"></i> Queen Bed</li>
-                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
-                            <li><i class="fas fa-tv"></i> Smart TV</li>
-                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
-                        </ul>
-                        <div class="room-footer">
-                            <div class="room-price">
-                                <span class="price">$120</span>
-                                <span class="per-night">/ night</span>
-                            </div>
-                            <a href="#booking" class="btn btn-secondary">Book Now</a>
-                        </div>
-                    </div>
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span class="label-text">Accommodations</span>
+                    <span class="label-line"></span>
                 </div>
-
-                <!-- Room 2 -->
-                <div class="room-card">
-                    <div class="room-image">
-                        <div class="room-img-placeholder">
+                <h2 class="section-title center">
+                    Exquisite Suites & <em>Rooms</em>
+                </h2>
+                <p class="section-desc">Each suite is a masterpiece of design, offering the perfect blend of comfort and sophistication</p>
+            </div>
+            <div class="suites-grid">
+                <!-- Suite 1 -->
+                <div class="suite-card">
+                    <div class="suite-image">
+                        <div class="suite-img-placeholder">
                             <i class="fas fa-bed"></i>
                             <span>Deluxe Room</span>
                         </div>
-                        <span class="room-badge featured">Best Value</span>
+                        <div class="suite-overlay">
+                            <a href="#reservations" class="btn btn-white btn-sm">Book Now</a>
+                        </div>
+                        <div class="suite-tag">Popular Choice</div>
                     </div>
-                    <div class="room-content">
-                        <h3 class="room-title">Deluxe Room</h3>
-                        <p class="room-desc">Spacious room with stunning hill views, premium amenities, and elegant decor.</p>
-                        <ul class="room-features">
-                            <li><i class="fas fa-bed"></i> King Bed</li>
-                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
-                            <li><i class="fas fa-mountain"></i> Hill View</li>
-                            <li><i class="fas fa-bath"></i> Jacuzzi</li>
-                        </ul>
-                        <div class="room-footer">
-                            <div class="room-price">
-                                <span class="price">$180</span>
-                                <span class="per-night">/ night</span>
+                    <div class="suite-content">
+                        <div class="suite-header">
+                            <h3 class="suite-title">Deluxe Room</h3>
+                            <div class="suite-price">
+                                <span class="currency">&#8369;</span>
+                                <span class="amount">3,500</span>
+                                <span class="period">/ night</span>
                             </div>
-                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                        <p class="suite-desc">Elegantly designed room featuring premium amenities and stunning garden views, perfect for a rejuvenating stay.</p>
+                        <ul class="suite-amenities">
+                            <li><i class="fas fa-bed"></i> Queen Size Bed</li>
+                            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+                            <li><i class="fas fa-tv"></i> Smart TV</li>
+                            <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                            <li><i class="fas fa-shower"></i> Rain Shower</li>
+                            <li><i class="fas fa-coffee"></i> Coffee Maker</li>
+                        </ul>
+                        <div class="suite-footer">
+                            <span class="suite-size"><i class="fas fa-expand-arrows-alt"></i> 32 sqm</span>
+                            <span class="suite-guests"><i class="fas fa-user-friends"></i> 2 Guests</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Room 3 -->
-                <div class="room-card">
-                    <div class="room-image">
-                        <div class="room-img-placeholder">
+                <!-- Suite 2 -->
+                <div class="suite-card featured">
+                    <div class="suite-image">
+                        <div class="suite-img-placeholder">
+                            <i class="fas fa-bed"></i>
+                            <span>Premier Suite</span>
+                        </div>
+                        <div class="suite-overlay">
+                            <a href="#reservations" class="btn btn-white btn-sm">Book Now</a>
+                        </div>
+                        <div class="suite-tag gold">Best Seller</div>
+                    </div>
+                    <div class="suite-content">
+                        <div class="suite-header">
+                            <h3 class="suite-title">Premier Suite</h3>
+                            <div class="suite-price">
+                                <span class="currency">&#8369;</span>
+                                <span class="amount">5,500</span>
+                                <span class="period">/ night</span>
+                            </div>
+                        </div>
+                        <p class="suite-desc">Spacious suite with panoramic hill views, featuring a separate living area and premium luxury amenities.</p>
+                        <ul class="suite-amenities">
+                            <li><i class="fas fa-bed"></i> King Size Bed</li>
+                            <li><i class="fas fa-mountain"></i> Hill View</li>
+                            <li><i class="fas fa-couch"></i> Living Area</li>
+                            <li><i class="fas fa-bath"></i> Soaking Tub</li>
+                            <li><i class="fas fa-glass-martini-alt"></i> Mini Bar</li>
+                            <li><i class="fas fa-concierge-bell"></i> Butler Service</li>
+                        </ul>
+                        <div class="suite-footer">
+                            <span class="suite-size"><i class="fas fa-expand-arrows-alt"></i> 55 sqm</span>
+                            <span class="suite-guests"><i class="fas fa-user-friends"></i> 2 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite 3 -->
+                <div class="suite-card">
+                    <div class="suite-image">
+                        <div class="suite-img-placeholder">
                             <i class="fas fa-bed"></i>
                             <span>Family Suite</span>
                         </div>
+                        <div class="suite-overlay">
+                            <a href="#reservations" class="btn btn-white btn-sm">Book Now</a>
+                        </div>
                     </div>
-                    <div class="room-content">
-                        <h3 class="room-title">Family Suite</h3>
-                        <p class="room-desc">Ideal for families, featuring separate living area and two bedrooms with all amenities.</p>
-                        <ul class="room-features">
-                            <li><i class="fas fa-bed"></i> 2 Bedrooms</li>
-                            <li><i class="fas fa-couch"></i> Living Area</li>
-                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
-                            <li><i class="fas fa-mountain"></i> Balcony</li>
-                        </ul>
-                        <div class="room-footer">
-                            <div class="room-price">
-                                <span class="price">$280</span>
-                                <span class="per-night">/ night</span>
+                    <div class="suite-content">
+                        <div class="suite-header">
+                            <h3 class="suite-title">Family Suite</h3>
+                            <div class="suite-price">
+                                <span class="currency">&#8369;</span>
+                                <span class="amount">8,500</span>
+                                <span class="period">/ night</span>
                             </div>
-                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                        <p class="suite-desc">Generously proportioned suite designed for families, featuring two bedrooms and a spacious living area.</p>
+                        <ul class="suite-amenities">
+                            <li><i class="fas fa-bed"></i> 2 Bedrooms</li>
+                            <li><i class="fas fa-couch"></i> Living Room</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-door-open"></i> Private Balcony</li>
+                            <li><i class="fas fa-gamepad"></i> Entertainment</li>
+                            <li><i class="fas fa-child"></i> Child Friendly</li>
+                        </ul>
+                        <div class="suite-footer">
+                            <span class="suite-size"><i class="fas fa-expand-arrows-alt"></i> 85 sqm</span>
+                            <span class="suite-guests"><i class="fas fa-user-friends"></i> 4 Guests</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Room 4 -->
-                <div class="room-card">
-                    <div class="room-image">
-                        <div class="room-img-placeholder">
+                <!-- Suite 4 -->
+                <div class="suite-card">
+                    <div class="suite-image">
+                        <div class="suite-img-placeholder">
                             <i class="fas fa-crown"></i>
-                            <span>Presidential Suite</span>
+                            <span>Presidential Villa</span>
                         </div>
-                        <span class="room-badge premium">Premium</span>
+                        <div class="suite-overlay">
+                            <a href="#reservations" class="btn btn-white btn-sm">Book Now</a>
+                        </div>
+                        <div class="suite-tag premium">Ultimate Luxury</div>
                     </div>
-                    <div class="room-content">
-                        <h3 class="room-title">Presidential Suite</h3>
-                        <p class="room-desc">The ultimate luxury experience with panoramic views, private terrace, and butler service.</p>
-                        <ul class="room-features">
-                            <li><i class="fas fa-bed"></i> Master Suite</li>
-                            <li><i class="fas fa-hot-tub"></i> Private Spa</li>
-                            <li><i class="fas fa-concierge-bell"></i> Butler Service</li>
-                            <li><i class="fas fa-champagne-glasses"></i> Mini Bar</li>
-                        </ul>
-                        <div class="room-footer">
-                            <div class="room-price">
-                                <span class="price">$450</span>
-                                <span class="per-night">/ night</span>
+                    <div class="suite-content">
+                        <div class="suite-header">
+                            <h3 class="suite-title">Presidential Villa</h3>
+                            <div class="suite-price">
+                                <span class="currency">&#8369;</span>
+                                <span class="amount">15,000</span>
+                                <span class="period">/ night</span>
                             </div>
-                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                        <p class="suite-desc">The epitome of luxury featuring private infinity pool, dedicated butler, and unmatched panoramic vistas.</p>
+                        <ul class="suite-amenities">
+                            <li><i class="fas fa-swimming-pool"></i> Private Pool</li>
+                            <li><i class="fas fa-hot-tub"></i> Jacuzzi</li>
+                            <li><i class="fas fa-user-tie"></i> Personal Butler</li>
+                            <li><i class="fas fa-utensils"></i> Private Chef</li>
+                            <li><i class="fas fa-spa"></i> In-Suite Spa</li>
+                            <li><i class="fas fa-car"></i> Airport Transfer</li>
+                        </ul>
+                        <div class="suite-footer">
+                            <span class="suite-size"><i class="fas fa-expand-arrows-alt"></i> 150 sqm</span>
+                            <span class="suite-guests"><i class="fas fa-user-friends"></i> 4 Guests</span>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="suites-cta">
+                <a href="#reservations" class="btn btn-gold btn-lg">
+                    <span>View All Accommodations</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Amenities Section -->
-    <section class="amenities" id="amenities">
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="experience-bg"></div>
         <div class="container">
             <div class="section-header light">
-                <span class="section-tag">Services</span>
-                <h2 class="section-title">Hotel Amenities</h2>
-                <p class="section-desc">Discover our world-class facilities designed for your comfort and enjoyment</p>
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span class="label-text">Amenities</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title center">
+                    World-Class <em>Experiences</em>
+                </h2>
+                <p class="section-desc">Indulge in our exceptional facilities designed for your ultimate comfort and pleasure</p>
             </div>
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-swimming-pool"></i>
                     </div>
-                    <h3>Swimming Pool</h3>
-                    <p>Infinity pool with stunning hill views, perfect for relaxation</p>
+                    <h3>Infinity Pool</h3>
+                    <p>Panoramic infinity pool with breathtaking views of the rolling hills and stunning sunsets</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Spa & Wellness</h3>
-                    <p>Full-service spa offering massages, treatments, and therapies</p>
+                    <h3>Luxury Spa</h3>
+                    <p>Rejuvenating treatments using indigenous ingredients and world-renowned techniques</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3>Fine Dining</h3>
-                    <p>Gourmet restaurant serving local and international cuisine</p>
+                    <p>Exquisite culinary journeys featuring local delicacies and international cuisine</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
                     <h3>Fitness Center</h3>
-                    <p>State-of-the-art gym equipment and personal trainers</p>
+                    <p>State-of-the-art equipment with personal trainers and yoga sessions available</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3>Free WiFi</h3>
-                    <p>High-speed internet throughout the property</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Free Parking</h3>
-                    <p>Complimentary secure parking for all guests</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-cocktail"></i>
                     </div>
-                    <h3>Lounge Bar</h3>
-                    <p>Elegant bar serving premium drinks and cocktails</p>
+                    <h3>Sky Lounge</h3>
+                    <p>Sophisticated rooftop bar serving premium cocktails and fine wines</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="exp-card">
+                    <div class="exp-icon">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
-                    <h3>Room Service</h3>
-                    <p>24/7 in-room dining and concierge services</p>
+                    <h3>24/7 Concierge</h3>
+                    <p>Dedicated team ensuring every request is fulfilled with grace and precision</p>
                 </div>
             </div>
         </div>
@@ -301,127 +467,70 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Gallery</span>
-                <h2 class="section-title">Explore Our Hotel</h2>
-                <p class="section-desc">Take a visual tour of our beautiful property and facilities</p>
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span class="label-text">Gallery</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title center">
+                    Visual <em>Journey</em>
+                </h2>
+                <p class="section-desc">Glimpses of the extraordinary experiences that await you</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item large">
+                <div class="gallery-item gi-1">
                     <div class="gallery-placeholder">
                         <i class="fas fa-image"></i>
-                        <span>Hotel Lobby</span>
+                        <span>Lobby & Reception</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Grand Lobby</span>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item gi-2">
                     <div class="gallery-placeholder">
                         <i class="fas fa-image"></i>
-                        <span>Pool Area</span>
+                        <span>Infinity Pool</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Infinity Pool</span>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item gi-3">
                     <div class="gallery-placeholder">
                         <i class="fas fa-image"></i>
                         <span>Restaurant</span>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Spa</span>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Fine Dining</span>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item gi-4">
                     <div class="gallery-placeholder">
                         <i class="fas fa-image"></i>
                         <span>Suite Interior</span>
                     </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Premier Suite</span>
+                    </div>
                 </div>
-                <div class="gallery-item large">
+                <div class="gallery-item gi-5">
                     <div class="gallery-placeholder">
                         <i class="fas fa-image"></i>
-                        <span>Hill View</span>
+                        <span>Spa & Wellness</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Spa Retreat</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="booking-wrapper">
-                <div class="booking-info">
-                    <span class="section-tag">Reservations</span>
-                    <h2 class="section-title">Book Your Stay</h2>
-                    <p>Ready for an unforgettable experience? Reserve your room today and let us take care of the rest.</p>
-                    <ul class="booking-benefits">
-                        <li><i class="fas fa-check-circle"></i> Best Price Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> Free Cancellation</li>
-                        <li><i class="fas fa-check-circle"></i> Complimentary Breakfast</li>
-                        <li><i class="fas fa-check-circle"></i> Early Check-in Available</li>
-                    </ul>
-                    <div class="booking-contact">
-                        <p>Or call us directly:</p>
-                        <a href="tel:+63XXXXXXXXXX" class="booking-phone"><i class="fas fa-phone"></i> +63 XXX XXX XXXX</a>
+                <div class="gallery-item gi-6">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <span>Hill Views</span>
                     </div>
-                </div>
-                <div class="booking-form-wrapper">
-                    <form class="booking-form" id="bookingForm">
-                        <div class="form-group">
-                            <label for="checkin">Check-in Date</label>
-                            <input type="date" id="checkin" name="checkin" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout">Check-out Date</label>
-                            <input type="date" id="checkout" name="checkout" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="adults">Adults</label>
-                                <select id="adults" name="adults">
-                                    <option value="1">1</option>
-                                    <option value="2" selected>2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="children">Children</label>
-                                <select id="children" name="children">
-                                    <option value="0" selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="room-type">Room Type</label>
-                            <select id="room-type" name="room-type">
-                                <option value="standard">Standard Room - $120/night</option>
-                                <option value="deluxe">Deluxe Room - $180/night</option>
-                                <option value="family">Family Suite - $280/night</option>
-                                <option value="presidential">Presidential Suite - $450/night</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+1 (234) 567-890">
-                        </div>
-                        <div class="form-group">
-                            <label for="requests">Special Requests</label>
-                            <textarea id="requests" name="requests" rows="3" placeholder="Any special requests or requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Check Availability</button>
-                    </form>
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Scenic Views</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -431,11 +540,20 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Testimonials</span>
-                <h2 class="section-title">What Our Guests Say</h2>
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    <span class="label-text">Testimonials</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title center">
+                    Guest <em>Experiences</em>
+                </h2>
             </div>
-            <div class="testimonials-grid">
+            <div class="testimonials-slider">
                 <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
                     <div class="testimonial-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -443,16 +561,19 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"An absolutely magical stay! The views from our room were breathtaking, and the staff went above and beyond to make our anniversary special."</p>
+                    <p class="testimonial-text">"An absolutely magnificent experience. The attention to detail and level of service exceeded all our expectations. The views from our suite were simply breathtaking."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
+                        <div class="author-avatar">MC</div>
                         <div class="author-info">
-                            <h4>James & Diana</h4>
-                            <span>New York, USA</span>
+                            <h4>Maria Cruz</h4>
+                            <span>Manila, Philippines</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
                     <div class="testimonial-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -460,16 +581,19 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"The perfect family getaway! Kids loved the pool, and we enjoyed the spa. The family suite was spacious and had everything we needed."</p>
+                    <p class="testimonial-text">"The perfect blend of modern luxury and Filipino warmth. Every staff member made us feel like royalty. This will be our annual retreat destination."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
+                        <div class="author-avatar">JR</div>
                         <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <span>London, UK</span>
+                            <h4>Juan Reyes</h4>
+                            <span>Cebu City, Philippines</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
                     <div class="testimonial-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -477,14 +601,124 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Outstanding service and beautiful property. The restaurant serves the best food I've had at any hotel. Will definitely return!"</p>
+                    <p class="testimonial-text">"From the moment we arrived, everything was perfect. The spa treatments were divine, and the restaurant offered the most exquisite culinary experience."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">RK</div>
+                        <div class="author-avatar">AS</div>
                         <div class="author-info">
-                            <h4>Raj Kumar</h4>
-                            <span>Mumbai, India</span>
+                            <h4>Anna Santos</h4>
+                            <span>Davao, Philippines</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section class="reservations" id="reservations">
+        <div class="reservations-bg"></div>
+        <div class="container">
+            <div class="reservations-wrapper">
+                <div class="reservations-content">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span class="label-text">Reservations</span>
+                    </div>
+                    <h2 class="section-title">
+                        Begin Your <br><em>Luxurious Escape</em>
+                    </h2>
+                    <p>Reserve your exclusive retreat and experience the pinnacle of Philippine hospitality. Our dedicated team awaits to craft your perfect stay.</p>
+                    <div class="reservation-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Best Rate Guarantee</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flexible Cancellation</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Complimentary Breakfast</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Early Check-in (Subject to Availability)</span>
+                        </div>
+                    </div>
+                    <div class="reservation-contact">
+                        <p>Prefer to speak with us?</p>
+                        <a href="tel:+639XXXXXXXXX" class="contact-phone">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+63 9XX XXX XXXX</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="reservations-form-wrapper">
+                    <form class="reservations-form" id="reservationForm">
+                        <h3 class="form-title">Make a Reservation</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">Check-in</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">Check-out</label>
+                                <input type="date" id="checkout" name="checkout" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">Adults</label>
+                                <select id="adults" name="adults">
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="children">Children</label>
+                                <select id="children" name="children">
+                                    <option value="0" selected>No Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="suite">Suite Type</label>
+                            <select id="suite" name="suite">
+                                <option value="deluxe">Deluxe Room - &#8369;3,500/night</option>
+                                <option value="premier">Premier Suite - &#8369;5,500/night</option>
+                                <option value="family">Family Suite - &#8369;8,500/night</option>
+                                <option value="presidential">Presidential Villa - &#8369;15,000/night</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="requests">Special Requests</label>
+                            <textarea id="requests" name="requests" rows="3" placeholder="Any special requests or requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-block">
+                            <span>Check Availability</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -493,55 +727,66 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-wrapper">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <span class="section-tag">Get in Touch</span>
-                    <h2 class="section-title">Contact Us</h2>
-                    <p>Have questions or need assistance? Our team is here to help you plan your perfect stay.</p>
-
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span class="label-text">Contact</span>
+                    </div>
+                    <h2 class="section-title">
+                        Get in <em>Touch</em>
+                    </h2>
+                    <p>We would be delighted to assist you. Reach out to us for inquiries, reservations, or any assistance you may need.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Dumanjug, Cebu<br>Central Visayas, Philippines</p>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Dumanjug, Cebu<br>Central Visayas, Philippines 6035</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>+63 XXX XXX XXXX</p>
+                                <p>+63 9XX XXX XXXX</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>info@hillfrontpharkinn.com</p>
+                                <p>reservations@hillfrontpharkinn.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
                                 <h4>Front Desk</h4>
-                                <p>24 Hours / 7 Days</p>
+                                <p>24 Hours, 7 Days a Week</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
                 <div class="contact-map">
                     <div class="map-placeholder">
                         <i class="fas fa-map-marked-alt"></i>
-                        <span>Map Location</span>
-                        <p>Interactive map will be displayed here</p>
+                        <span>Dumanjug, Cebu</span>
+                        <p>Interactive Map</p>
                     </div>
                 </div>
             </div>
@@ -550,56 +795,83 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">Hillfront Phark Inn</h3>
-                    <p>Experience comfort and warm Filipino hospitality in beautiful Dumanjug, Cebu. Your perfect retreat awaits.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">
+                            <span class="logo-icon">
+                                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25 5L45 20V45H5V20L25 5Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M15 45V28H35V45" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M25 5V15" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <div class="logo-text">
+                                <span class="logo-main">Hillfront</span>
+                                <span class="logo-sub">Phark Inn</span>
+                            </div>
+                        </a>
+                        <p>Experience the pinnacle of luxury hospitality in the serene hills of Dumanjug, Cebu. Where every moment becomes an unforgettable memory.</p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#suites">Suites & Rooms</a></li>
+                            <li><a href="#experience">Experiences</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Experiences</h4>
+                        <ul>
+                            <li><a href="#">Spa & Wellness</a></li>
+                            <li><a href="#">Fine Dining</a></li>
+                            <li><a href="#">Infinity Pool</a></li>
+                            <li><a href="#">Sky Lounge</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Tours</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe for exclusive offers and updates from Hillfront Phark Inn.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#rooms">Rooms & Suites</a></li>
-                        <li><a href="#amenities">Amenities</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Spa & Wellness</a></li>
-                        <li><a href="#">Restaurant</a></li>
-                        <li><a href="#">Events & Meetings</a></li>
-                        <li><a href="#">Airport Transfer</a></li>
-                        <li><a href="#">Tour Packages</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe for exclusive offers and updates</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Hillfront Phark Inn. All rights reserved. | DTI Cert. No. 7215562</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2025 Hillfront Phark Inn. All Rights Reserved. | DTI Cert. No. 7215562</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <script src="js/main.js"></script>
 </body>
